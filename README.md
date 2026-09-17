@@ -6,6 +6,8 @@ DeepSeek Harness is built around an **everything-is-a-plugin** model, so the fas
 
 ## Start here
 
+These are the upstream resources referenced by the DeepSeek Harness project itself:
+
 - Official DeepSeek Harness repository: <https://github.com/deepseek-ai/deepseek-harness>
 - Official documentation: <https://deepseek-harness.github.io/deepseek-harness/>
 - Community plugin topic: <https://github.com/topics/dsh-plugin>
@@ -34,22 +36,28 @@ Prefer plugins that clearly document:
 
 ## Useful places to browse
 
-### Discovery and catalogs
+This section separates **plugin catalogs** from **broader DSH-compatible projects** so readers can quickly tell whether a link is primarily for discovery or for a larger workflow integration.
+
+### Plugin catalogs and directories
 
 - [awesome-dsh-plugin/awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) — broad community-maintained plugin list
 - [0xsline/awesome-deepseek-harness](https://github.com/0xsline/awesome-deepseek-harness) — ecosystem map of plugins, skills, tools, and infrastructure
 
-### Memory and knowledge
+### Broader DSH-compatible projects
+
+These projects are useful examples and integrations in the ecosystem, but they may be larger products, plugin bundles, or adjacent tooling rather than single drop-in plugin packages.
+
+#### Memory and knowledge
 
 - [EverMind-AI/EverOS](https://github.com/EverMind-AI/EverOS) — portable memory layer for agent workflows
 - [MemTensor/MemOS](https://github.com/MemTensor/MemOS) — persistent memory and retrieval system for agent runtimes
 
-### Design and output generation
+#### Design and output generation
 
 - [nexu-io/open-design](https://github.com/nexu-io/open-design) — design-oriented workflows for coding agents
 - [tt-a1i/archify](https://github.com/tt-a1i/archify) — architecture and system-diagram generation
 
-### Desktop and interface projects
+#### Desktop and interface projects
 
 - [dataelement/dsh-desktop](https://github.com/dataelement/dsh-desktop) — desktop packaging for the DSH ecosystem
 - [zhu1090093659/dsh-web](https://github.com/zhu1090093659/dsh-web) — web-focused plugin aggregation and UI work
