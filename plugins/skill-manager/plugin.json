@@ -1,0 +1,52 @@
+{
+  "idPrefix": "skmgr",
+  "name": "技能管理 Skill Manager",
+  "summary": "在设置面板里列出、编辑并保存技能（SKILL.md）：分组列表、frontmatter 表单、Markdown 预览、新建与删除用户技能。",
+  "kind": "dynamic-cordis-plugin",
+  "halves": {
+    "host": "host.js",
+    "client": "client.js"
+  },
+  "host": {
+    "services": ["skills", "fs", "shell"],
+    "softDependencies": true,
+    "rpc": {
+      "bootstrap": "读取技能目录，返回 { home, cwd, skills[], targets[] }",
+      "read": "按白名单读取某个 SKILL.md 全文",
+      "save": "写回全文（仅可写技能）",
+      "create": "在选定技能根目录下新建 <name>/SKILL.md",
+      "delete": "删除用户/项目技能（目录或单文件）"
+    }
+  },
+  "client": {
+    "slots": [
+      {
+        "name": "settings.section",
+        "id": "skill-manager",
+        "order": 30,
+        "label": "技能管理"
+      },
+      {
+        "name": "tool.view.cordis",
+        "key": "self"
+      }
+    ]
+  },
+  "pathPolicy": {
+    "writable": [
+      "<any>/.agents/skills/<name>/SKILL.md",
+      "<any>/.dsh/skills/<name>/SKILL.md",
+      "<any>/.agents/skills/<name>.md",
+      "<any>/.dsh/skills/<name>.md"
+    ],
+    "readOnly": [
+      "preset 内置技能（bundled）",
+      "其它 custom 技能目录"
+    ],
+    "rejected": [
+      "任何含 . 或 .. 段的路径",
+      "点开头的技能目录名",
+      "非 *.md / SKILL.md 的文件"
+    ]
+  }
+}

@@ -22,4 +22,8 @@ plugins/
 
 ## 当前状态
 
-本目录目前只有约定说明，尚未包含任何真正落地的插件登记项。新增插件时请遵循上述约定，并同步在 `docs/roadmap.md` 的验收矩阵中登记对应的端到端验证。
+本目录目前包含 1 个插件登记项：
+
+- [`skill-manager/`](skill-manager/) —— 类别「其他」（DSH 客户端插件），在设置面板里管理本机技能目录。登记说明见其 `PLUGIN.md`，离线端到端验证见 `skill-manager/verify.mjs`。
+
+`plugins/` 下仍**没有** Skills 管理面或 MCP 管理 UI 的登记项。新增插件时请遵循上述约定，并同步在 `docs/roadmap.md` 的验收矩阵中登记对应的端到端验证。
